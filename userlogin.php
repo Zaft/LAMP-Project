@@ -1,7 +1,5 @@
 <?php
 
-include("do_upload.php");
-
 //check for required fields from the form
 if ((!filter_input(INPUT_POST, 'username'))
         || (!filter_input(INPUT_POST, 'password'))) {
@@ -11,7 +9,7 @@ if ((!filter_input(INPUT_POST, 'username'))
 }
 
 //connect to server and select database
-$mysqli = mysqli_connect("localhost", "cs213user", "letmein", "testDB");
+$mysqli = mysqli_connect("localhost", "organicDBuser", "letmein", "organic");
 
 //create and issue the query
 $targetname = filter_input(INPUT_POST, 'username');
@@ -38,7 +36,7 @@ if (mysqli_num_rows($result) == 1) {
 	<h3> Welcome ".$firstname." ".$lastname."!</h3>
 	<p>Please make sure to add fields to your farm before submitting an application:</p>
         <a link href='Application.html'>Start Application</a> </br>
-        <a link href='Addfield.html'>Add Field</a>";
+        <a link href='addfield.php'>Add Field</a>";
         
 } else {
 	//redirect back to login form if not authorized
