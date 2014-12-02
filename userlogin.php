@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if ((!filter_input(INPUT_POST, 'username'))
         || (!filter_input(INPUT_POST, 'password'))) {
 	header("Location: userlogin.html");
@@ -10,7 +12,7 @@ $mysqli = mysqli_connect("localhost", "organicDBuser", "letmein", "organic");
 
 $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
-$sql = "SELECT firstname, lastname FROM members WHERE username = '".$username.
+$sql = "SELECT firstname, lastname, id FROM members WHERE username = '".$username.
         "' AND password = PASSWORD('".$password."')";
 
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
@@ -19,11 +21,11 @@ if (mysqli_num_rows($result) == 1) {
 	while ($info = mysqli_fetch_array($result)) {
 		$f_name = stripslashes($info['firstname']);
 		$l_name = stripslashes($info['lastname']);
+                $member_id = stripslashes($info['id']);
 	}
-
-	//set authorization cookie
-	setcookie("auth", "1", time()+60*30, "/", "", 0);
-
+        $_SESSION['member_id'] = $member_id;
+        
+         
 	//create display string
 	$display_block = "
 	<h3> Welcome ".$firstname." ".$lastname."!</h3>
