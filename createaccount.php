@@ -1,7 +1,8 @@
 <?php
+    include("connection.php");
+    $mysqli = connectToDB();
     if (filter_input(INPUT_POST, 'username')) {
 	$username = filter_input(INPUT_POST, 'username');
-	$mysqli = mysqli_connect("localhost", "organicDBuser", "letmein", "organic");
 	$sql = "SELECT * FROM members WHERE username = '" . $username . "';";
 	$result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 	
@@ -11,7 +12,7 @@
 	    <a href="createaccount.php">Try Again</a><br>
 	    <a href="userlogin.html">Login Page</a>';
 	} else {
-	    $insertSQL = "INSERT INTO members VALUES("
+	    $insertMemberSQL = "INSERT INTO members VALUES("
 		    . "null,"
 		    . "'" . filter_input(INPUT_POST, 'username') . "',"
 		    . "'" . filter_input(INPUT_POST, 'firstname') . "',"
@@ -19,7 +20,7 @@
 		    . "'" . filter_input(INPUT_POST, 'email') . "',"
 		    . "password('".filter_input(INPUT_POST, 'password')."')"
 		    . ");";
-	    mysqli_query($mysqli, $insertSQL) or die(mysqli_error($mysqli));
+	    mysqli_query($mysqli, $insertMemberSQL) or die(mysqli_error($mysqli));
 	    
 	    $display = '
 	    <p>Account successfully created.</p>
