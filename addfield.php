@@ -9,8 +9,7 @@ if ((filter_input(INPUT_POST, 'fieldname'))) {
     
     $mysqli = mysqli_connect("localhost", "organicDBuser", "letmein", "organic");
     
-    /*$sql = "INSERT into firstname, lastname FROM members WHERE username = '".$username.
-        "' AND password = PASSWORD('".$password."')";
+    /*$sql = "INSERT into fields values('';
     */
     $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
     header("Location: userlogin.html");
