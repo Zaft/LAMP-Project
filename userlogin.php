@@ -1,6 +1,4 @@
 <?php
-
-
 if ((!filter_input(INPUT_POST, 'username'))
         || (!filter_input(INPUT_POST, 'password'))) {
 	header("Location: userlogin.html");
@@ -29,8 +27,8 @@ if (mysqli_num_rows($result) == 1) {
 	$display_block = "
 	<h3> Welcome ".$firstname." ".$lastname."!</h3>
 	<p>Please make sure to add fields to your farm before submitting an application:</p>
-        <a link href='Application.html'>Start Application</a> </br>
-        <a link href='addfield.php'>Add Field</a>";
+        <a link href='addfield.php'>Add Field</a></br>
+        <a link href='createapplication.php'>Start Application</a>";
         
 } else {
 	//redirect back to login form if not authorized
