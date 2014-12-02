@@ -1,6 +1,5 @@
 <?php
 
-
 if ((!filter_input(INPUT_POST, 'username'))
         || (!filter_input(INPUT_POST, 'password'))) {
 	header("Location: userlogin.html");
