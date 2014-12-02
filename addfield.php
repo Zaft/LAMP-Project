@@ -4,9 +4,16 @@
 if ((filter_input(INPUT_POST, 'fieldname'))) {
     //connect to server and select database
     $fieldname = filter_input(INPUT_POST, 'fieldname');
+    $crop = filter_input(INPUT_POST, 'cropOption');
+    $fertilizer = filter_input(INPUT_POST, 'fertOption');
     
     $mysqli = mysqli_connect("localhost", "organicDBuser", "letmein", "organic");
     
+    /*$sql = "INSERT into firstname, lastname FROM members WHERE username = '".$username.
+        "' AND password = PASSWORD('".$password."')";
+    */
+    $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
+    header("Location: userlogin.html");
     
 }else{
 $displayBlock = '
