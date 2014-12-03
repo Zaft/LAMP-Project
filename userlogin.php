@@ -39,13 +39,7 @@ if (mysqli_num_rows($result) == 1) {
 	exit;
 }
 ?>
-<html>
-    <head>
-	<title>User Login</title>
-	<link rel="stylesheet" type="text/css" href="styles.css"></style>
-    </head>
-    <body>
+<?php require('header.php'); ?>
 	<?php echo "$display_block"; ?>
-    </body>
-</html>
+<?php require('footer.php'); ?>
 

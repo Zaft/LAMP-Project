@@ -1,7 +1,7 @@
 <?php require('header.php'); ?>
-<?php require('header.php'); ?>
-<img src="images/grass.jpg" alt="" width="800" height="400px">
-<div id="homeImage"></div>
+<div id="background">
+    <img src="images/grass.jpg" class="stretch" alt="" />
+</div>
         <form method="post" action="userlogin.php">
             <p><strong>Username:</strong><br/>
             <input type="text" name="username"/></p>

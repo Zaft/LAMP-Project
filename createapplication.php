@@ -36,13 +36,7 @@
 	</form>';
     }
 ?>
-<html>
-    <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-        <title>Create an Application</title>
-    </head>
-    <body>
+<?php require('header.php'); ?>
 	<?php echo $display;?>
-    </body>
-</html>
+<?php require('footer.php'); ?>
 

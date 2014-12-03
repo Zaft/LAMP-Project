@@ -18,7 +18,7 @@
   <table width="100%" bgcolor="white" cellpadding="4" cellspacing="4">
   <tr >
     <td width="25%">
-      <span class="menu">Home</span></td>
+        <span class="menu"><a href="https://localhost/OrganicDatabase/userlogin.php">Home</a></span></td>
     <td width="25%">
       <span class="menu">About</span></td>
     <td width="25%">
