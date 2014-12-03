@@ -34,6 +34,7 @@
 	    <p>Click <a href="createaccount.php">here</a> to create an account </p>';
     }
 ?>
+<?php require('head.php'); ?>
 <?php require('header.php'); ?>
     <?php echo $display;?>
 <?php require('footer.php'); ?>

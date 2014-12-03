@@ -45,6 +45,7 @@
 	}
     }
 ?>
+<?php require('head.php'); ?>
 <?php require('header.php'); ?>
     <?php echo $displayBlock ?>
 <?php require('footer.php'); ?>
