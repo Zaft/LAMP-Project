@@ -5,8 +5,9 @@
     
     $id = $_SESSION['member_id'];
     $applicationsQuery = "SELECT * FROM applications WHERE field_id IN "
-	. "(SELECT id FROM fields WHERE member_id = " . $id . ");";
+	. "(SELECT id FROM fields WHERE member_id = " . $id . ") ORDER BY id DESC;";
     $applicationsResult = mysqli_query($mysqli, $applicationsQuery) or die(mysqli_error($mysqli));
+    $display .= '<div class="content">';
     while ($resultrow = mysqli_fetch_array($applicationsResult)) {
 	$display .= '<div class="applicationview">';
 	
@@ -28,10 +29,13 @@
 	while($fertilizerrow = mysqli_fetch_array($fertilizerResult)) {
 	    $display .= "<li>" . $fertilizerrow['name'] . "</li>";
 	}
-	$display .= '<p>Submission Date</p>';
-	$display .= '<p>' . $resultrow['submit_date'] . '</p>';
+	$display .= '<p>Status: ';
+	$display .= $resultrow['status'] . '</p>';
+	$display .= '<p>Submission Date: ';
+	$display .= date("M j, Y g:i A", strtotime($resultrow['submit_date'])) . '</p>';
 	$display .= '</div>';
     }
+    $display .= '</div>';
 ?>
 <?php require('header.php'); ?>
     <?php echo $display;?>

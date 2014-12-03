@@ -1,4 +1,5 @@
  <?php
+    session_start();
     include("connection.php");
     $mysqli = connectToDB();
     
@@ -11,17 +12,17 @@
 	$loginResult = mysqli_query($mysqli, $loginQuery) or die(mysqli_error($mysqli));
 
 	if (mysqli_num_rows($loginResult) == 1) {
-	    $memberRecord = mysqli_fetch_array($result);
+	    $memberRecord = mysqli_fetch_array($loginResult);
 		
 	    $_SESSION['member_id'] = $memberRecord['id'];
+	    header("Location: home.php");
 	}
-	header("Location: home.php");
     } else {
 	$display = '
 	    <div id="background">
 		<img src="images/grass.jpg" class="stretch" alt="" />
 	    </div>
-	    <form method="post" action="login.php">
+	    <form method="post" action="">
 		<p><strong>Username:</strong><br/>
 		<input type="text" name="username"/></p>
 		<p><strong>Password:</strong><br/>

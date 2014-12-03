@@ -28,7 +28,7 @@ body{
 }
 
 #footer {
-   position:absolute;
+   position:fixed;
    bottom:0;
    width:100%;
    height:60px;   /* Height of the footer */
@@ -55,4 +55,8 @@ div.applicationview {
     border: 2px solid darkgrey;
     margin: 10px;
     padding: 10px;
+}
+
+div.content {
+    padding-bottom: 60px;
 }

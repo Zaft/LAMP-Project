@@ -10,6 +10,7 @@
 		. filter_input(INPUT_POST, 'field') . ","
 		. filter_input(INPUT_POST, 'pesticide') . ","
 		. filter_input(INPUT_POST, 'fertilizer') . ","
+		. "pending,"
 		. "now());";
 	mysqli_query($mysqli, $insertApplicationSQL) or die(mysqli_error($mysqli));
 	header("Location: viewapplications.php");
