@@ -27,8 +27,10 @@ CREATE TABLE `applications` (
   `field_id` int(10) DEFAULT NULL,
   `pesticide` varchar(50) DEFAULT NULL,
   `fertilizer` varchar(50) DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
+  `submit_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +39,7 @@ CREATE TABLE `applications` (
 
 LOCK TABLES `applications` WRITE;
 /*!40000 ALTER TABLE `applications` DISABLE KEYS */;
+INSERT INTO `applications` VALUES (8,1,'1','1','pending','2014-12-03 11:19:35'),(9,2,'2','2','pending','2014-12-03 11:27:36');
 /*!40000 ALTER TABLE `applications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +54,7 @@ CREATE TABLE `crops` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,6 +63,7 @@ CREATE TABLE `crops` (
 
 LOCK TABLES `crops` WRITE;
 /*!40000 ALTER TABLE `crops` DISABLE KEYS */;
+INSERT INTO `crops` VALUES (1,'Apples'),(2,'Cherries'),(3,'Strawberries'),(4,'Carrots');
 /*!40000 ALTER TABLE `crops` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,7 +78,7 @@ CREATE TABLE `fertilizers` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,6 +87,7 @@ CREATE TABLE `fertilizers` (
 
 LOCK TABLES `fertilizers` WRITE;
 /*!40000 ALTER TABLE `fertilizers` DISABLE KEYS */;
+INSERT INTO `fertilizers` VALUES (1,'Jerry\'s Organic Fertilizer'),(2,'Tom\'s Blood Meal Blend'),(3,'Zinc Super'),(4,'Fast Acting Gypsum');
 /*!40000 ALTER TABLE `fertilizers` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -100,7 +105,7 @@ CREATE TABLE `fields` (
   `crop` varchar(30) DEFAULT NULL,
   `area` int(6) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -109,6 +114,7 @@ CREATE TABLE `fields` (
 
 LOCK TABLES `fields` WRITE;
 /*!40000 ALTER TABLE `fields` DISABLE KEYS */;
+INSERT INTO `fields` VALUES (1,1,'Test Apple Field','1',10),(2,1,'Strawberry Field','3',12),(3,1,'Cherry Land','2',4);
 /*!40000 ALTER TABLE `fields` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +133,7 @@ CREATE TABLE `members` (
   `email` varchar(50) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,6 +142,7 @@ CREATE TABLE `members` (
 
 LOCK TABLES `members` WRITE;
 /*!40000 ALTER TABLE `members` DISABLE KEYS */;
+INSERT INTO `members` VALUES (1,'test','Test','User','test@email.com','*94BDCEBE19083CE2A1F959FD02F964C7AF4CFC29'),(3,'JohnUser','John','Doe','jdoe@email.com','*D37C49F9CBEFBF8B6F4B165AC703AA271E079004'),(4,'Bacon','Bacon','Man','bacon@email.com','*F59FD81FA772D790A52347F263E9C55C1BB03F5B');
 /*!40000 ALTER TABLE `members` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,7 +157,7 @@ CREATE TABLE `pesticides` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,6 +166,7 @@ CREATE TABLE `pesticides` (
 
 LOCK TABLES `pesticides` WRITE;
 /*!40000 ALTER TABLE `pesticides` DISABLE KEYS */;
+INSERT INTO `pesticides` VALUES (1,'Aldicarb'),(2,'Atrazine'),(3,'Carbaryl'),(4,'Chlorpyrifos');
 /*!40000 ALTER TABLE `pesticides` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -171,4 +179,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-30 15:06:21
+-- Dump completed on 2014-12-03 12:13:21

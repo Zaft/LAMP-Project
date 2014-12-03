@@ -56,5 +56,5 @@
 ?>
 
 <?php require('header.php'); ?>
-	<?php echo $display;?>
+    <?php echo $display;?>
 <?php require('footer.php'); ?>
