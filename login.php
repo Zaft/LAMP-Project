@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link rel="stylesheet" type="text/css" href="styles.css"/>
-    </head>
-    <body>
-        <h1>Welcome to the Organic Database Home Page</h1>
+<?php require('header.php'); ?>
+<?php require('header.php'); ?>
+<img src="images/grass.jpg" alt="" width="800" height="400px">
+<div id="homeImage"></div>
         <form method="post" action="userlogin.php">
             <p><strong>Username:</strong><br/>
             <input type="text" name="username"/></p>
@@ -18,5 +12,5 @@
         
         <h3> Don't have an account? </h3>
         <p>Click <a href="createaccount.php">here</a> to create an account </p>
-    </body>
-</html>
+        
+<?php require('footer.php'); ?>

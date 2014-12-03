@@ -48,11 +48,6 @@ $displayBlock = '
        </fieldset>';
 }
 ?>
-<html>
-<head>
-   <title>Supply Your Field Details</title>
-</head>
-    <body>
+<?php require('header.php'); ?>
         <?php echo $displayBlock ?>
-    </body>
-</html>
+<?php require('footer.php'); ?>

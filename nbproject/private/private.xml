@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/OrganicDatabase/userlogin.html</file>
-            <file>file:/var/www/html/OrganicDatabase/createaccount.php</file>
-            <file>file:/var/www/html/OrganicDatabase/Application.html</file>
-            <file>file:/var/www/html/OrganicDatabase/userlogin.php</file>
-            <file>file:/var/www/html/OrganicDatabase/createapplication.php</file>
+            <file>file:/var/www/html/OrganicDatabase/addfield.php</file>
+            <file>file:/var/www/html/OrganicDatabase/login.php</file>
+            <file>file:/var/www/html/OrganicDatabase/header.php</file>
+            <file>file:/var/www/html/OrganicDatabase/styles.css</file>
         </group>
     </open-files>
 </project-private>

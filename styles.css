@@ -1,0 +1,19 @@
+
+form{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #DDDDDD;
+}
+
+body{
+    background-color: #FFFFFF;
+    color: #AAAAAA;
+    font-family: Helvitca, Gills, sans-serif;
+}
+
+#homeImage{
+    background-image: url("images/grass.jpg");
+}
+
