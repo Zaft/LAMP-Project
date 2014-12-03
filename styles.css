@@ -41,5 +41,18 @@ body{
    height:100px;   /* Height of the footer */
 }
 
+label.applyaccount {
+    display: inline-block;
+    width:100px;
+}
 
+label.createapplication {
+    display: inline-block;
+    width:100px;
+}
 
+div.applicationview {
+    border: 2px solid darkgrey;
+    margin: 10px;
+    padding: 10px;
+}

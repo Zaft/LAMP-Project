@@ -12,8 +12,7 @@ $mysqli = mysqli_connect("localhost", "organicDBuser", "letmein", "organic");
 
 $username = filter_input(INPUT_POST, 'username');
 $password = filter_input(INPUT_POST, 'password');
-$sql = "SELECT firstname, lastname, id FROM members WHERE username = '".$username.
-        "' AND password = PASSWORD('".$password."')";
+$sql = "SELECT * WHERE username = '".$username."' AND password = PASSWORD('".$password."')";
 
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
@@ -24,14 +23,14 @@ if (mysqli_num_rows($result) == 1) {
                 $member_id = stripslashes($info['id']);
 	}
         $_SESSION['member_id'] = $member_id;
-        
          
 	//create display string
 	$display_block = "
 	<h3> Welcome ".$firstname." ".$lastname."!</h3>
 	<p>Please make sure to add fields to your farm before submitting an application:</p>
         <a link href='addfield.php'>Add Field</a></br>
-        <a link href='createapplication.php'>Start Application</a>";
+        <a link href='createapplication.php'>Start Application</a></br>
+        <a link href='viewapplications.php'>View Existing Applications</a>";
         
 } else {
 	//redirect back to login form if not authorized
