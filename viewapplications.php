@@ -36,7 +36,10 @@
 	$display .= '</div>';
     }
     $display .= '</div>';
+    
+    $_SESSION['display'] = $display;
 ?>
 <?php require('header.php'); ?>
+<h4>Click <a href="tcpdf/examples/application_pdf.php"> here </a> to generate PDF</h4>
     <?php echo $display;?>
 <?php require('footer.php'); ?>

@@ -16,14 +16,12 @@
 
   <!-- menu -->
   <table width="100%" bgcolor="white" cellpadding="4" cellspacing="4">
-  <tr >
+  <tr>
     <td width="25%">
         <span class="menu"><a href="home.php">Home</a></span></td>
     <td width="25%">
-      <span class="menu">About</span></td>
+        <span class="menu"><a href="about.php">About</span></td>
     <td width="25%">
       <span class="menu">Contact</span></td>
-    <td width="25%">
-      <span class="menu">Site Map</span></td>
   </tr>
   </table>
