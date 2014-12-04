@@ -19,5 +19,7 @@
         <span class="menu"><a href="about.php">About</a></span></td>
     <td width="25%">
         <span class="menu"><a href="contact.php">Contact</a></span></td>
+    <td width="25%">
+        <span class="menu"><a href="logout.php">Log Out</span></td>
   </tr>
   </table>
