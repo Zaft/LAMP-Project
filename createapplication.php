@@ -13,7 +13,7 @@
 		    . filter_input(INPUT_POST, 'field') . ","
 		    . filter_input(INPUT_POST, 'pesticide') . ","
 		    . filter_input(INPUT_POST, 'fertilizer') . ","
-		    . "pending,"
+		    . "'pending',"
 		    . "now());";
 	    mysqli_query($mysqli, $insertApplicationSQL) or die(mysqli_error($mysqli));
 	    header("Location: viewapplications.php");
@@ -42,7 +42,7 @@
 	    $display .= '
 		</select><br>
 		<label class="createapplication" for="pesticide">Pesticide:</label>
-		<select name="pesticide">';
+		<select name="pesticide" onchange="loadPesticides(this.value)">';
 	    $pesticidesQuery = "SELECT * FROM pesticides;";
 	    $pesticidesResult = mysqli_query($mysqli, $pesticidesQuery) or die(mysqli_error($mysqli));
 	    while ($resultrow = mysqli_fetch_array($pesticidesResult)) {
@@ -52,9 +52,23 @@
 		</select><br>
 		<input type="submit" name="submit" value="Apply"/>
 	    </form>';
+	    $display .= '<p id="test">';
 	}
     }
 ?>
+<?php require('head.php'); ?>
+<script>
+    function loadPesticides(value) {
+//	var xmlhttp = new XMLHttpRequest();
+//	xmlhttp.onreadystatechange = function() {
+//	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//		document.getElementById("test").innerHTML = xmlhttp.responseText;
+//	    }
+//	}
+//	xmlhttp.open("GET", "loadpesticides.php?brand=" + value, true);
+//	xmlhttp.send();
+    }
+</script>
 <?php require('header.php'); ?>
     <?php echo $display;?>
 <?php require('footer.php'); ?>

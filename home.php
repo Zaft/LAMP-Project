@@ -22,6 +22,7 @@
         <a link href='viewapplications.php'>View Existing Applications</a>";
     }
 ?>
+<?php require('head.php'); ?>
 <?php require('header.php'); ?>
     <?php echo $display; ?>
 <?php require('footer.php'); ?>
