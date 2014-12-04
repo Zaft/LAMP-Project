@@ -62,7 +62,6 @@ $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'colo
 // Set some content to print
 $html = <<<EOD
 <h2>Field Application Report:</h2>
-<i></i>
 EOD;
 
 $html2 = $_SESSION['display'];

@@ -16,8 +16,8 @@
     <td width="25%">
         <span class="menu"><a href="home.php">Home</a></span></td>
     <td width="25%">
-        <span class="menu"><a href="about.php">About</span></td>
+        <span class="menu"><a href="about.php">About</a></span></td>
     <td width="25%">
-      <span class="menu">Contact</span></td>
+        <span class="menu"><a href="contact.php">Contact</a></span></td>
   </tr>
   </table>
