@@ -28,6 +28,8 @@
 	}
     } else {
 	$display = '
+        <div class=content>
+        <div class=contentBlock>
 	<p>Create a new account</p>
 	<form action="" method="POST">
 	    <label class="applyaccount" for="username">Username:</label>
@@ -51,7 +53,10 @@
 	    <br>
 	    
 	    <input type="submit" value="Submit">
-	</form>';
+	</form>
+        </div>
+        </div>';
+        
     }
 ?>
 <?php require('head.php'); ?>
