@@ -55,7 +55,7 @@
 ?>
 <?php require('head.php'); ?>
 <?php require('header.php'); ?>
-<p><a href="tcpdf/examples/application_pdf.php"><img src="images/logo-adobe-pdf.jpg" width="35px"
+<?php echo $display; ?>
+<p> <a href="tcpdf/examples/application_pdf.php" id="adobeLogo"><img src="images/logo-adobe-pdf.jpg" width="35px"
                                                             height="35px"> </a></p>
-    <?php echo $display;?>
 <?php require('footer.php'); ?>

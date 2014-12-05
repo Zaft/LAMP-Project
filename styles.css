@@ -60,3 +60,9 @@ div.applicationview {
 div.content {
     padding-bottom: 60px;
 }
+
+#adobeLogo{
+    position: absolute;
+    right: 30px;
+    top: 140px;
+}

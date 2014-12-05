@@ -4,7 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/var/www/html/OrganicDatabase/styles.css</file>
+            <file>file:/var/www/html/OrganicDatabase/about.php</file>
+            <file>file:/var/www/html/OrganicDatabase/contact.php</file>
             <file>file:/var/www/html/OrganicDatabase/login.php</file>
+            <file>file:/var/www/html/OrganicDatabase/viewapplications.php</file>
+            <file>file:/var/www/html/OrganicDatabase/tcpdf/examples/application_pdf.php</file>
+            <file>file:/var/www/html/OrganicDatabase/footer.php</file>
             <file>file:/var/www/html/OrganicDatabase/addfield.php</file>
             <file>file:/var/www/html/OrganicDatabase/header.php</file>
         </group>
