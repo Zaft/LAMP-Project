@@ -12,7 +12,7 @@
 	$applicationsResult = mysqli_query($mysqli, $applicationsQuery) or die(mysqli_error($mysqli));
 	$display .= '<div class="content">';
 	while ($resultrow = mysqli_fetch_array($applicationsResult)) {
-	    $display .= '<div class="applicationview">';
+	    $display .= '<div class="contentblock">';
 
 	    $fieldQuery = "SELECT * FROM fields WHERE id = " . $resultrow['field_id'] . ";";
 	    $fieldResult = mysqli_query($mysqli, $fieldQuery) or die(mysqli_error($mysqli));
