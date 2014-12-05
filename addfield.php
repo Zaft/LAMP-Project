@@ -20,6 +20,8 @@
 	    header("Location: home.php");
 	} else {
 	    $displayBlock = '
+	    <div class="content">
+	    <div class="contentblock">
 	       <h3> Provide Field Details Below </h3>
 	       <fieldset>
 	       <legend>Add Field</legend>
@@ -32,7 +34,9 @@
 		    <input type ="text" name="fieldarea">
 		    </br>
 		    <p>Select a Crop for this field:</p>
-		    <select name="crop" onchange="loadCropSubtypes(this.value)">';
+		    <select name="crop" onchange="loadCropSubtypes(this.value)">
+	    </div>
+	    </div>';
 	    $cropsQuery = "SELECT * FROM crops;";
 	    $cropsResult = mysqli_query($mysqli, $cropsQuery) or die(mysqli_error($mysqli));
 	    while ($resultrow = mysqli_fetch_array($cropsResult)) {

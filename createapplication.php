@@ -20,6 +20,8 @@
 	} else {
 	    $id = $_SESSION['member_id'];
 	    $display = '
+	    <div class="content">
+	    <div class="contentblock">
 	    <form method="post" action="">
 		<label class="createapplication" for="field">Field:</label>
 		<select name="field">';
@@ -51,8 +53,9 @@
 	    $display .= '
 		</select><br>
 		<input type="submit" name="submit" value="Apply"/>
-	    </form>';
-	    $display .= '<p id="test">';
+	    </form>
+	    </div>
+	    </div>';
 	}
     }
 ?>
