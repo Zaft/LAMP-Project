@@ -22,9 +22,13 @@
 	    $display = '
 	    <div class="content">
 	    <div class="contentblock">
-	    <form method="post" action="">
-		<label class="createapplication" for="field">Field:</label>
-		<select name="field">';
+	       <h3> Create a New Application </h3>
+		<form method="post" action="">
+		    <fieldset>
+		    <legend>Application Details</legend>
+		    <p>Select one of your fields. If the field you want is not in the list, create it <a href="addfield.php">here</a>.</p>
+		    <label class="createapplication" for="field">Field:</label>
+		    <select name="field">';
 	    $fieldsQuery = "SELECT * FROM fields WHERE member_id = " . $id . ";";
 	    $fieldsResult = mysqli_query($mysqli, $fieldsQuery) or die(mysqli_error($mysqli));
 	    while ($resultrow = mysqli_fetch_array($fieldsResult)) {
@@ -33,6 +37,7 @@
 
 	    $display .= '
 		</select><br>
+		<p>Select the fertilizer and pesticide you used on this field.</p>
 		<label class="createapplication" for="fertilizer">Fertilizer:</label>
 		<select name="fertilizer">';
 	    $fertilizersQuery = "SELECT * FROM fertilizers;";
@@ -52,7 +57,8 @@
 	    }
 	    $display .= '
 		</select><br>
-		<input type="submit" name="submit" value="Apply"/>
+		</fieldset>
+		<input type="submit" name="submit" value="Submit"/>
 	    </form>
 	    </div>
 	    </div>';

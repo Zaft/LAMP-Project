@@ -21,12 +21,17 @@
 	$display = '
 	    <div class="content">
 	    <div class="contentblock">
+	       <h3>Log In</h3>
 		<form method="post" action="">
-		    <p><strong>Username:</strong><br/>
-		    <input type="text" name="username"/></p>
-		    <p><strong>Password:</strong><br/>
-		    <input type="password" name="password"/></p>
-		    <p><input type="submit" name="submit" value="Log In"/></p>
+		    <fieldset>
+		    <legend>Account Details</legend>
+		    <label class="login" for="username">Username: </label>
+		    <input type="text" name="username"/>
+		    <br>
+		    <label class="login" for="password">Password: </label>
+		    <input type="password" name="password"/>
+		    </fieldset>
+		    <input type="submit" name="submit" value="Log In"/>
 		</form>
 	    </div>
 	    

@@ -68,22 +68,29 @@ body {
 
 label.applyaccount {
     display: inline-block;
-    width:100px;
+    width: 100px;
 }
 
 label.createapplication {
     display: inline-block;
-    width:100px;
+    width: 100px;
 }
 
-/*div.header {
-    width: 100%;
-    position: fixed;
-}*/
+label.addfield {
+    display: inline-block;
+    width: 150px;
+}
+
+label.login {
+    display: inline-block;
+    width: 100px;
+}
 
 div.content {
     padding-top: 120px;
     padding-bottom: 50px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 #adobeLogo{
@@ -100,7 +107,7 @@ div.contentblock {
 }
 
 table.menu {
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
 }
 
 div.header {

@@ -22,18 +22,19 @@
 	    $displayBlock = '
 	    <div class="content">
 	    <div class="contentblock">
-	       <h3> Provide Field Details Below </h3>
-	       <fieldset>
-	       <legend>Add Field</legend>
-	       <form method="POST" action="">
-		   <p>Provide a name to identify your field</p>
-		    Field Name:
+		<h3> Create a New Field </h3>
+		<form method="POST" action="">
+		    <fieldset>
+		    <legend>Field Details</legend>
+		    <p>Provide a name to identify your field.</p>
+		    <label class="addfield" for="fertilizer">Field Name:</label>
 		    <input type ="text" name="fieldname">
 		    </br>
-		    Field Area (acres):
+		    <label class="addfield" for="fieldarea">Field Area (acres):</label>
 		    <input type ="text" name="fieldarea">
 		    </br>
-		    <p>Select a Crop for this field:</p>
+		    <p>Select a Crop for this field.</p>
+		    <label class="addfield" for="crop">Type of crop: </label>
 		    <select name="crop" onchange="loadCropSubtypes(this.value)">
 	    </div>
 	    </div>';
@@ -44,11 +45,11 @@
 	    }
 	    $displayBlock .= '
 		</select><br>
+		<label class="addfield" for="crop_subtype">Variety of crop: </label>
 		<select name="crop_subtype"></select><br>
+		</fieldset>
 		<input type="submit" name="submit" value="Submit"/>
-		</form>
-		</fieldset>';
-	    $displayBlock .= '<p id="test">';
+		</form>';
 	}
     }
 ?>

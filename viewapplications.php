@@ -25,8 +25,9 @@
 	    $cropSubtypeNameResult = mysqli_query($mysqli, $cropSubtypeNameQuery) or die(mysqli_error($mysqli));
 	    $cropSubtypeName = mysqli_fetch_array($cropSubtypeNameResult)['name'];
 		    
-	    $display .= "<h4>" . $fieldrow['name'] . "</h4>";
-	    $display .= '<p>' . $cropSubtypeName . " " . $cropName . '</p>';
+	    $display .= '<h4>' . $fieldrow['name'] . '</h4>
+		    <fieldset>
+		    <legend>' . $cropSubtypeName . " " . $cropName . '</legend>';
 		    
 	    $display .= '<p>Pesticide</p>';
 	    $pesticideQuery = "SELECT * FROM pesticides WHERE id = " . $resultrow['pesticide'] . ";";
